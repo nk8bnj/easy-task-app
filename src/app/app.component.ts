@@ -14,10 +14,10 @@ import { User } from '../types/user.interface';
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  selectedUserId: string = this.users[0].id;
+  selectedUserId?: string;
 
-  get selectedUser(): User {
-    return this.users.find((user) => user.id === this.selectedUserId)!;
+  get selectedUser(): User | undefined {
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
 
   selectUser(id: string) {
