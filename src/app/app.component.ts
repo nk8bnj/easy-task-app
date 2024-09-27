@@ -23,4 +23,8 @@ export class AppComponent {
   selectUser(id: string) {
     this.selectedUserId = id;
   }
+
+  isUserSelected(userId: string) {
+    return this.selectedUserId === userId;
+  }
 }
